@@ -1,0 +1,367 @@
+.menu-catalog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+.nav-catalog {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    &__link {
+        /* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
+        font-weight: 400;
+        font-size: $font-t2;
+        line-height: 32px;
+        // letter-spacing: 0%;
+        color: $color3;
+        text-decoration: none;
+    }
+}
+
+.select-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    &__btn {
+        appearance: none;
+        background-image: url(../svg/Polygon1.svg);
+        background-color: $color-text;
+        background-position: calc(100% - 22px) center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        font-family: inherit;
+        text-align: left;
+        font-size: $font-t2;
+        line-height: 19.5px;
+        color: $color3;
+        border: 1px solid #c4c4c4;
+        border-radius: 20px;
+        padding-left: 21px;
+        padding-top: 9px;
+        padding-bottom: 11px;
+    }
+
+    &__filter {
+        font-weight: 500;
+        width: 182px;
+        &-link {
+            text-decoration: none;
+            display: inline-block;
+            font-family: inherit;
+            &:hover {
+                text-decoration: none;
+                font-family: inherit;
+            }
+        }
+    }
+
+    &__popularity {
+        font-weight: 400;
+        width: 227px;
+    }
+}
+// #main1 {
+//     display: none;
+// }
+// #main1:target {
+//     display: block;
+//     position: relative;
+//     top: 30px;
+//     left: -50px;
+//     z-index: 1;
+// }
+
+
+.form-filter {
+    max-width: 541.5px;
+    top: calc(100% + 14px);
+    right: 0;
+    box-shadow: 0px 4px 67px 12px rgba(0, 0, 0, 0.32);
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+
+    &__info {
+        display: flex;
+        column-gap: 65px;
+    }
+    &__type {
+        width: 190.5px;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+    }
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__submit {
+        margin-top: 36px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        background-color: transparent;
+        width: 190px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.5px;
+        // letter-spacing: 0px;
+        text-align: center;
+    }
+}
+.filter {
+    border: 0; /* Черная граница */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.07px;
+    background-color: transparent;
+    // letter-spacing: 0%;
+
+    &__legend {
+        margin-bottom: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+    &__check {
+        margin-top: 2px;
+        display: flex;
+        row-gap: 14px;
+        flex-direction: column;
+    }
+    &__radio {
+        display: none; /* Скрываем стандартные радиокнопки */
+        & + label {
+            /* Устанавливаем относительное позиционирование метки */
+            position: relative;
+            /* Меняем курсор мыши при наведении на метку */
+            cursor: pointer;
+            /* Добавляем отступ слева для размещения стилизованного элемента */
+            padding-left: 29px;
+        }
+        & + label::before {
+            content: ""; /* Содержимое пусто, но стиль будет применен */
+            position: absolute; /* Устанавливаем абсолютное позиционирование */
+            left: 0; /* Выравниваем по левой стороне метки */
+            top: 50%; /* Центрируем по вертикали относительно метки */
+            transform: translateY(-50%); /* Поправка для точного центрирования */
+            width: 15px; /* Ширина стилизованного элемента */
+            height: 15px; /* Высота стилизованного элемента */
+            border: 1px solid $color1; /* Черная граница */
+            border-radius: 50%; /* Скругляем углы до состояния круга */
+            background: #fff; /* Белый фон внутри элемента */
+        }
+        &:checked + label::before {
+            content: ""; /* Содержимое пусто, но стиль будет применен */
+            position: absolute; /* Устанавливаем абсолютное позиционирование */
+            left: 0; /* Выравниваем по левой стороне метки */
+            top: 50%; /* Центрируем по вертикали относительно метки */
+            transform: translateY(-50%); /* Поправка для точного центрирования */
+            width: 15px; /* Ширина стилизованного элемента */
+            height: 15px; /* Высота стилизованного элемента */
+            border: 1px solid $color3; /* Черная граница */
+            border-radius: 50%; /* Скругляем углы до состояния круга */
+            background: #fff; /* Белый фон внутри элемента */
+        }
+        &:checked + label::after {
+            content: ""; /* Содержимое пусто, но стиль будет применен */
+            position: absolute; /* Устанавливаем абсолютное позиционирование */
+            left: 5px; /* Выравниваем по левой стороне метки со сдвигом */
+            top: 50%; /* Центрируем по вертикали относительно метки */
+            transform: translateY(-50%); /* Поправка для точного центрирования */
+            width: 8.5px; /* Ширина кружка внутри стилизованного элемента */
+            height: 8px; /* Высота кружка внутри стилизованного элемента */
+            background-image: url(../svg/Vector1.svg);
+        }
+    }
+    &__color {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 15px 15px;
+        row-gap: 14px;
+    }
+}
+.label {
+    /* Устанавливаем относительное позиционирование метки */
+    position: relative;
+    /* Добавляем отступ слева для размещения стилизованного элемента */
+    padding-left: 29px;
+    /* Меняем курсор мыши при наведении на метку */
+    cursor: pointer;
+    &::before {
+        content: ""; /* Содержимое пусто, но стиль будет применен */
+        // display: inline-block;
+        position: absolute; /* Устанавливаем абсолютное позиционирование */
+        left: 0; /* Выравниваем по левой стороне метки */
+        top: 50%; /* Центрируем по вертикали относительно метки */
+        transform: translateY(-50%); /* Поправка для точного центрирования */
+        width: 14px; /* Ширина стилизованного элемента */
+        height: 14px; /* Высота стилизованного элемента */
+        border-radius: 0; /* Небольшое скругление углов */
+    }
+}
+
+.checkbox {
+    display: none; /* Скрываем стандартные флажки */
+    &:checked + .label::before {
+        // content: ""; /* Содержимое пусто, но стиль будет применен */
+        // position: absolute; /* Устанавливаем абсолютное позиционирование */
+        // left: 0; /* Выравниваем по левой стороне метки */
+        // top: 50%; /* Центрируем по вертикали относительно метки */
+        // transform: translateY(-50%); /* Поправка для точного центрирования */
+        width: 15px; /* Ширина стилизованного элемента */
+        height: 15px; /* Высота стилизованного элемента */
+        border: 1px solid $color3; /* Черная граница */
+        // border-radius: 0; /* Небольшое скругление углов */
+    }
+    &:checked + .label::after {
+        content: ""; /* Содержимое пусто, но стиль будет применен */
+        position: absolute; /* Устанавливаем абсолютное позиционирование */
+        left: 4px; /* Выравниваем по левой стороне метки со сдвигом */
+        top: 50%; /* Центрируем по вертикали относительно метки */
+        transform: translateY(-50%); /* Поправка для точного центрирования */
+        // left: 2px; /* Выравниваем по левой стороне метки со сдвигом */
+        // top: 30%; /* Центрируем по вертикали относительно метки */
+        // width: 8.5px; /* Ширина кружка внутри стилизованного элемента */
+        // height: 8px; /* Высота кружка внутри стилизованного элемента */
+        // background-image: url(../svg/Vector1.svg);
+        // width: 5px; /* Ширина стилизованной галочки */
+        // height: 10px; /* Высота стилизованной галочки */
+        // border: solid #000; /* Черный цвет галочки */
+        // border-width: 0 2px 2px 0; /* Создание диагональной линии галочки */
+        // /* Поворот линии для создания галочки: */
+        // transform: rotate(45deg) translateY(-50%);
+        width: 8.5px; /* Ширина кружка внутри стилизованного элемента */
+        height: 8px; /* Высота кружка внутри стилизованного элемента */
+        // background-image: url(../png/Vector1.png);
+        // background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 3.5L4.5 7L7.5 1' stroke='black'/%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &:checked + .label::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 3.5L4.5 7L7.5 1' stroke='black'/%3e%3c/svg%3e ");
+    }
+    &-item:nth-child(2) > &:checked + .label::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 3.5L4.5 7L7.5 1' stroke='black'/%3e%3c/svg%3e ");
+    }
+    &-item:nth-child(2) > &:checked + .label::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 3.5L4.5 7L7.5 1' stroke='white'/%3e%3c/svg%3e ");
+    }
+    &-color1::before {
+        border: 1px solid $color1;
+        background: #ffffff;
+    }
+    &-color2::before {
+        background: $color3;
+        border: 1px solid $color3;
+    }
+    &-color3::before {
+        background: #737373;
+        border: 1px solid #737373;
+    }
+    &-color4::before {
+        background: #ff0000;
+        border: 1px solid #ff0000;
+    }
+    &-color5::before {
+        background: #ff7a41;
+        border: 2px solid #ff7a41;
+    }
+    &-color6::before {
+        background: #f2cb01;
+        border: 1px solid #f2cb01;
+    }
+    &-color7::before {
+        background: #00bf2a;
+        border: 1px solid #00bf2a;
+    }
+    &-color11::before {
+        background: #1ccc97;
+        border: 1px solid #1ccc97;
+    }
+    &-color12::before {
+        background: #009fe3;
+        border: 1px solid #009fe3;
+    }
+    &-color13::before {
+        background: #000af8;
+        border: 1px solid #000af8;
+    }
+    &-color14::before {
+        background: #6710d6;
+        border: 1px solid #6710d6;
+    }
+    &-color15::before {
+        background: #9d0db5;
+        border: 1px solid #9d0db5;
+    }
+    &-color16::before {
+        background: #d89aff;
+        border: 1px solid #d89aff;
+    }
+    &-color17::before {
+        background: #ff65a6;
+        border: 1px solid #ff65a6;
+    }
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 190px;
+    gap: 14px;
+    &__input {
+        width: 190px;
+        height: 10px;
+        overflow: hidden;
+        outline: none;
+        &,
+        &::-webkit-slider-runnable-track,
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background: none;
+        }
+        &::-webkit-slider-runnable-track {
+            width: 200px;
+            height: 1px;
+            background: $color3;
+        }
+        &:nth-child(2)::-webkit-slider-runnable-track {
+            background: none;
+        }
+        &::-webkit-slider-thumb {
+            position: relative;
+            height: 8px;
+            width: 8px;
+            margin-top: -4px;
+            background: $color3;
+            border: 1px solid $color3;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        &::-webkit-slider-thumb:activ {
+            cursor: grabbing;
+        }
+        &:nth-child(1)::-webkit-slider-thumb {
+            z-index: 2;
+        }
+    }
+    &__slider {
+        font-family: sans-serif;
+        font-size: 14px;
+        position: relative;
+        height: 20px;
+        width: 210px;
+        display: inline-block;
+        margin-top: -5px;
+        & input {
+            position: absolute;
+        }
+    }
+}

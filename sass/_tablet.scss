@@ -1,0 +1,80 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 786px / 2);
+        padding-right: calc(50% - 786px / 2);
+    }
+    .top {
+        &__content {
+            width: 786px;
+        }
+        &__title {
+            /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
+            max-width: 96%;
+        }
+    }
+    .for {
+        &__content {
+            grid-template-columns: repeat(24, 1fr);
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+
+        &__item {
+            height: 268px;
+            grid-column: span 8;
+
+            &_big {
+                grid-column: span 12;
+            }
+            &-cat {
+                grid-column: span 12;
+            }
+        }
+    }
+    .product {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .product-content {
+        column-gap: 29px;
+        row-gap: 39px;
+    }
+    .catalog-link {
+        margin-top: 41px;
+    }
+    .footer {
+        &__logo {
+            display: none;
+        }
+        &__content {
+            padding-left: 0;
+        }
+        &__info {
+            padding-left: 0;
+        }
+    }
+    .cart-box {
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 32px;
+    }
+    .cart__button {
+        &-link {
+            background-color: $color3;
+            color: $color-text;
+            &:hover {
+                background-color: $color-text;
+                color: $color3;
+            }
+        }
+    }
+    .form-filter {
+        right: -237px;
+    }
+}
+
+@media (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

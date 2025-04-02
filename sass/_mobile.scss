@@ -1,0 +1,245 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .header {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        &__search,
+        &-menu {
+            display: none;
+        }
+        &__logo {
+            width: 99px;
+        }
+        &__mobil {
+            display: flex;
+            gap: $gap;
+            align-items: center;
+        }
+    }
+    .top {
+        &__content {
+            width: 100%;
+            margin-top: 22px;
+        }
+
+        &__title {
+            /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
+            margin-top: 29px;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 100%;
+            text-align: center;
+            &-big {
+                margin-top: 60px;
+            }
+        }
+
+        &__text {
+            /* Параграфу p (Наша мебель — ваше отражение): */
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        &__link {
+            /* Ссылке <a href="catalog.html">Перейти в каталог</a> */
+            text-decoration: underline;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+    }
+    .for {
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+        }
+        &__content {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 16px;
+            row-gap: 16px;
+        }
+        &__item {
+            min-height: 243.78px;
+            grid-column: span 4;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 100%;
+            text-align: center;
+            vertical-align: middle;
+
+            &_big {
+                min-height: 375px;
+                grid-column: span 4;
+            }
+            &-cat {
+                grid-column: span 4;
+            }
+        }
+    }
+    .product-box {
+        margin-top: $gap;
+        &__title {
+            /* Заголовку h2 (Специальные предложения): */
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+        }
+    }
+    .product {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+        /* .product__img {
+        } */
+
+        &__name {
+            /* Заголовку h3 (Кресло VILORA): */
+            margin-top: 9.05px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 100%;
+        }
+
+        &__text {
+            /* Параграфу p (Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань): */
+            margin-top: 9.63px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+        }
+
+        &__price {
+            margin-top: 8px;
+            font-size: 18px;
+            line-height: 100%;
+        }
+    }
+
+    .catalog-link {
+        /* Ссылке <a href="catalog.html">Перейти в каталог</a> */
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-thickness: 0%;
+        margin-top: 36.39px;
+    }
+    .footer {
+        margin-top: $gap;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        /* &__logo {} */
+        &__content {
+            width: 100%;
+            gap: 69px;
+            justify-content: center;
+        }
+
+        &__info {
+            gap: 100px;
+            padding-right: 0;
+            justify-content: space-between;
+        }
+        &__item {
+            min-width: 79px;
+        }
+    }
+    .menu-catalog {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+    }
+    .nav-catalog {
+        flex-wrap: wrap;
+        &__link {
+            /* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+    .pos-r {
+        display: flex;
+    }
+    .select-catalog {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        &__btn {
+            font-size: 14px;
+            line-height: 100%;
+            padding-left: 19px;
+            padding-top: 11px;
+            padding-bottom: 13px;
+        }
+
+        &__filter {
+            width: 164px;
+        }
+
+        &__popularity {
+            width: 203px;
+        }
+    }
+    .form-filter {
+        max-width: 286.5px;
+        top: calc(100% + 14px);
+        left: 0;
+        box-shadow: 0px 4px 67px 12px rgba(0, 0, 0, 0.32);
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 40px 48px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+        }
+        &__btn {
+            display: flex;
+            justify-content: center;
+        }
+        &__submit {
+            margin-top: 32px;
+        }
+    }
+    .cart-box {
+        grid-template-columns: repeat(4, 1fr);
+
+        &__content {
+            grid-column: span 4;
+        }
+        &__header {
+            display: none;
+        }
+    }
+
+    .cart {
+        &__img {
+            display: none;
+        }
+        &__btn {
+            margin-top: calc(50px - $top2);
+            gap: 7px;
+            display: flex;
+        }
+        &__button {
+            width: 166px;
+            font-size: 12px;
+            &-link {
+                width: 163px;
+                font-size: 12px;
+            }
+        }
+    }
+}
