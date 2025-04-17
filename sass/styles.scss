@@ -91,13 +91,13 @@ button {
     &__title {
         /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
         margin-top: $step30;
-        max-width: 95%;
+        width: 95%;
         font-weight: 600;
         font-size: $font-h1;
         line-height: 70px;
         color: $color-text;
         &-big {
-            margin-top: 127px;
+            margin-top: 93px;
         }
     }
 
@@ -175,18 +175,18 @@ button {
 //     display: block;
 // }
 
-
 .for {
     margin-top: $top1;
     &__title {
         font-weight: 600;
-        font-size: $font-h2;
+        font-size: 48px;
         line-height: 100%;
-        /* text-align: center; */
+        letter-spacing: 0%;
+        vertical-align: middle;
     }
 
     &__content {
-        margin-top: 32px;
+        margin-top: 42px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         flex-wrap: wrap;
@@ -194,6 +194,7 @@ button {
         row-gap: 31px;
     }
     &__content_cat {
+        margin-top: 32px;
         column-gap: 31px;
         row-gap: 58px;
     }
@@ -253,12 +254,13 @@ button {
         }
 
         &-cat {
+            max-width: 378px;
             grid-column: span 4;
         }
     }
 
     &__cat {
-        width: 378px;
+        max-width: 378px;
         height: 250px;
         display: flex;
         flex-direction: row;
@@ -314,6 +316,7 @@ button {
         font-weight: 600;
         font-size: $font-h2;
         line-height: 59px;
+        vertical-align: middle;
         color: $color3;
     }
 
@@ -321,13 +324,14 @@ button {
 }
 .product-content {
     margin-top: 32px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     column-gap: $gap;
     row-gap: 56px;
 }
 .product {
-    padding-top: 10px;
+    // padding-top: 10px;
     width: 378px;
     display: flex;
     flex-direction: column;
@@ -382,7 +386,7 @@ button {
     }
 
     &__price {
-        margin-top: 12px;
+        margin-top: 13px;
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
@@ -432,7 +436,7 @@ button {
     }
     &__content {
         box-sizing: border-box;
-        width: 800px;
+        width: 790px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;

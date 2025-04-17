@@ -5,7 +5,7 @@
     }
     .top {
         &__content {
-            width: 786px;
+            width: 720px;
         }
         &__title {
             /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
@@ -17,8 +17,11 @@
             grid-template-columns: repeat(24, 1fr);
             column-gap: 30px;
             row-gap: 30px;
+        &_cat {
+            column-gap: 29px;
+            row-gap: 30px;
         }
-
+        }
         &__item {
             height: 268px;
             grid-column: span 8;
@@ -29,6 +32,9 @@
             &-cat {
                 grid-column: span 12;
             }
+        }
+        &__price {
+            margin-top: 12px;
         }
     }
     .product {
@@ -65,6 +71,12 @@
                 background-color: $color-text;
                 color: $color3;
             }
+        }
+    }
+    .cart-order {
+        &__info {
+            margin-right: 61px;
+    
         }
     }
     .form-filter {

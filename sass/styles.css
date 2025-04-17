@@ -95,14 +95,14 @@ button:hover {
 .top__title {
   /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
   margin-top: 30px;
-  max-width: 95%;
+  width: 95%;
   font-weight: 600;
   font-size: 64px;
   line-height: 70px;
   color: #ffffff;
 }
 .top__title-big {
-  margin-top: 127px;
+  margin-top: 93px;
 }
 .top__text {
   /* Параграфу p (Наша мебель — ваше отражение): */
@@ -173,10 +173,11 @@ button:hover {
   font-weight: 600;
   font-size: 48px;
   line-height: 100%;
-  /* text-align: center; */
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 .for__content {
-  margin-top: 32px;
+  margin-top: 42px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   flex-wrap: wrap;
@@ -185,6 +186,7 @@ button:hover {
   row-gap: 31px;
 }
 .for__content_cat {
+  margin-top: 32px;
   -moz-column-gap: 31px;
        column-gap: 31px;
   row-gap: 58px;
@@ -241,10 +243,11 @@ button:hover {
   background-image: url(../img/product_cat006.jpg);
 }
 .for__item-cat {
+  max-width: 378px;
   grid-column: span 4;
 }
 .for__cat {
-  width: 378px;
+  max-width: 378px;
   height: 250px;
   display: flex;
   flex-direction: row;
@@ -299,11 +302,13 @@ button:hover {
   font-weight: 600;
   font-size: 48px;
   line-height: 59px;
+  vertical-align: middle;
   color: #000000;
 }
 
 .product-content {
   margin-top: 32px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 32px;
@@ -312,7 +317,6 @@ button:hover {
 }
 
 .product {
-  padding-top: 10px;
   width: 378px;
   display: flex;
   flex-direction: column;
@@ -362,7 +366,7 @@ button:hover {
   gap: 32px;
 }
 .product__price {
-  margin-top: 12px;
+  margin-top: 13px;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
@@ -409,7 +413,7 @@ button:hover {
 }
 .footer__content {
   box-sizing: border-box;
-  width: 800px;
+  width: 790px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -893,6 +897,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cart__img {
   width: 173px;
+  height: 173px;
 }
 .cart__img2 {
   width: 144px;
@@ -935,14 +940,17 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 29.4px;
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: Auto;
 }
 .cart__link-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 210%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
   color: #000000;
 }
 .cart__count {
@@ -983,7 +991,8 @@ input[type=number]::-webkit-outer-spin-button {
   color: #ffffff;
 }
 .cart__button-link {
-  padding: 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 200px;
   border: 1px solid #000000;
   border-radius: 50px;
@@ -1012,7 +1021,7 @@ input[type=number]::-webkit-outer-spin-button {
   right: 0;
   box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
   box-sizing: border-box;
-  background-color: #fff;
+  background: #f7f6f6;
   padding: 40px 48px;
   display: flex;
   flex-direction: column;
@@ -1023,35 +1032,34 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
 }
 .cart-order_2 {
   flex-direction: row;
   justify-content: space-between;
+  line-height: 150%;
+  letter-spacing: -3%;
 }
 .cart-order__grid {
   align-self: start;
   grid-column: span 4;
   border-radius: 20px;
   background-color: #F7F6F6;
-  padding-top: 42px;
+  padding-top: 46px;
   padding-bottom: 148px;
 }
 .cart-order__head {
   font-weight: 700;
   font-size: 24px;
-  line-height: 29.26px;
+  line-height: 36px;
   letter-spacing: 0px;
   color: #000000;
 }
 .cart-order__info {
   display: flex;
   flex-direction: column;
-  width: 288px;
   margin-top: 37px;
-  margin-bottom: 68px;
-  padding-left: 27px;
-  padding-right: 64px;
+  margin-left: 27px;
+  margin-right: 64px;
   gap: 44px;
   text-align: start;
 }
@@ -1064,6 +1072,23 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   border-bottom: 1px solid #cacdd8;
   color: #000000;
+}
+.cart-order__input::-moz-placeholder {
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.cart-order__input::placeholder {
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.cart-order__btn {
+  margin-top: 65px;
 }
 .cart-order__sum {
   font-weight: 400;
@@ -1080,6 +1105,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-width: 1px;
   border-radius: 20px;
   border-color: #040404;
+  background: #f7f6f6;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.5px;
@@ -1088,6 +1114,11 @@ input[type=number]::-webkit-outer-spin-button {
   color: #000000;
   padding-top: 10px;
   padding-bottom: 11px;
+}
+.cart-order__button:hover {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 .cart-order__button2 {
   margin-top: 0;
@@ -1100,7 +1131,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding-right: calc(50% - 393px);
   }
   .top__content {
-    width: 786px;
+    width: 720px;
   }
   .top__title {
     /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
@@ -1112,6 +1143,11 @@ input[type=number]::-webkit-outer-spin-button {
          column-gap: 30px;
     row-gap: 30px;
   }
+  .for__content_cat {
+    -moz-column-gap: 29px;
+         column-gap: 29px;
+    row-gap: 30px;
+  }
   .for__item {
     height: 268px;
     grid-column: span 8;
@@ -1121,6 +1157,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .for__item-cat {
     grid-column: span 12;
+  }
+  .for__price {
+    margin-top: 12px;
   }
   .product {
     padding-top: 0;
@@ -1155,6 +1194,9 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #ffffff;
     color: #000000;
   }
+  .cart-order__info {
+    margin-right: 61px;
+  }
   .form-filter {
     right: -237px;
   }
@@ -1185,12 +1227,16 @@ input[type=number]::-webkit-outer-spin-button {
     gap: 32px;
     align-items: center;
   }
+  .top {
+    margin-top: 32px;
+  }
   .top__content {
-    width: 100%;
+    width: 343px;
     margin-top: 22px;
   }
   .top__title {
     /* Для заголовка h1 (Всё, чего заслуживает ваш дом): */
+    max-width: 96%;
     margin-top: 29px;
     font-weight: 600;
     font-size: 48px;
@@ -1216,20 +1262,29 @@ input[type=number]::-webkit-outer-spin-button {
     letter-spacing: 0%;
     text-align: center;
   }
+  .for {
+    margin-top: 32px;
+  }
   .for__title {
     font-weight: 600;
     font-size: 24px;
-    letter-spacing: 0%;
     vertical-align: middle;
   }
   .for__content {
+    margin-top: 32px;
     grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 16px;
          column-gap: 16px;
     row-gap: 16px;
   }
+  .for__content__content_cat {
+    margin-top: 32px;
+    -moz-column-gap: 31px;
+         column-gap: 31px;
+    row-gap: 58px;
+  }
   .for__item {
-    min-height: 243.78px;
+    min-height: 343px;
     grid-column: span 4;
     font-weight: 600;
     font-size: 28px;
@@ -1238,39 +1293,77 @@ input[type=number]::-webkit-outer-spin-button {
     vertical-align: middle;
   }
   .for__item_big {
-    min-height: 375px;
-    grid-column: span 4;
+    min-height: 244px;
   }
   .for__item-cat {
     grid-column: span 4;
+  }
+  .for__cat {
+    width: 343px;
+    height: 226px;
+    gap: 21px;
+  }
+  .for__cat:hover .for__icon {
+    display: block;
+  }
+  .for__icon {
+    height: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    display: none;
+  }
+  .for__name {
+    /* Заголовку h3 (Кресло VILORA): */
+    font-size: 18px;
+    margin-top: 9px;
+  }
+  .for__text {
+    margin-top: 4px;
+  }
+  .for__price {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  .nav-catalog {
+    flex-wrap: wrap;
+  }
+  .nav-catalog__link {
+    /* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
+    font-size: 14px;
+  }
+  .select-catalog__btn {
+    font-size: 14px;
+  }
+  .select-catalog__filter {
+    width: 164px;
+  }
+  .select-catalog__popularity {
+    width: 203px;
   }
   .product-box {
     margin-top: 32px;
   }
   .product-box__title {
     /* Заголовку h2 (Специальные предложения): */
+    max-width: 250px;
     font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+    line-height: normal;
   }
   .product {
     padding-top: 0;
     padding-bottom: 0;
     width: 100%;
-    /* .product__img {
-    } */
   }
   .product__name {
     /* Заголовку h3 (Кресло VILORA): */
-    margin-top: 9.05px;
+    margin-top: 9px;
     text-decoration: none;
     font-size: 18px;
     line-height: 100%;
   }
   .product__text {
     /* Параграфу p (Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань): */
-    margin-top: 9.63px;
+    margin-top: 4px;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
@@ -1286,7 +1379,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 16px;
     line-height: 24px;
     text-decoration-thickness: 0%;
-    margin-top: 36.39px;
+    margin-top: 32px;
   }
   .footer {
     margin-top: 32px;
@@ -1310,15 +1403,7 @@ input[type=number]::-webkit-outer-spin-button {
   .menu-catalog {
     flex-direction: column;
     align-items: flex-start;
-    gap: 9px;
-  }
-  .nav-catalog {
-    flex-wrap: wrap;
-  }
-  .nav-catalog__link {
-    /* Для верхних ссылок «Каталог» и «Корзина» в шапке сайта: */
-    font-size: 16px;
-    line-height: 32px;
+    row-gap: 14px;
   }
   .pos-r {
     display: flex;
@@ -1376,6 +1461,27 @@ input[type=number]::-webkit-outer-spin-button {
   .cart__img {
     display: none;
   }
+  .cart__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
+  .cart__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .cart__price {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .cart__text2 {
+    font-size: 14px;
+  }
   .cart__btn {
     margin-top: 18px;
     gap: 7px;
@@ -1388,5 +1494,18 @@ input[type=number]::-webkit-outer-spin-button {
   .cart__button-link {
     width: 163px;
     font-size: 12px;
+  }
+  .cart-order {
+    max-width: 343px;
+  }
+  .cart-order__info {
+    margin-left: 28px;
+    margin-right: 27px;
+  }
+}
+@media (max-width: 374px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }/*# sourceMappingURL=styles.css.map */
