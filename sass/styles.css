@@ -1228,7 +1228,7 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
   }
   .top {
-    margin-top: 32px;
+    padding-top: 32px;
   }
   .top__content {
     width: 343px;
